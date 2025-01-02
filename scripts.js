@@ -1,25 +1,29 @@
-document.getElementById("schedule-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+// script.js
 
-    // Get form values
-    const team1 = document.getElementById("team1").value;
-    const team2 = document.getElementById("team2").value;
-    const date = document.getElementById("date").value;
+// Update the score based on form input
+document.getElementById('updateScoreForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    // Validate input
-    if (team1 && team2 && date) {
-        // Create a match entry
-        const matchDetails = `${team1} vs ${team2} on ${date}`;
-        
-        // Add match to the match list
-        const matchList = document.getElementById("match-list");
-        const listItem = document.createElement("li");
-        listItem.textContent = matchDetails;
-        matchList.appendChild(listItem);
+    const matchId = document.getElementById('matchId').value;
+    const score = document.getElementById('score').value;
 
-        // Clear the form
-        document.getElementById("schedule-form").reset();
-    } else {
-        alert("Please fill in all fields.");
+    if (matchId === "1") {
+        document.getElementById('score1').textContent = score;
+        document.getElementById('status1').textContent = "Updated";
+    } else if (matchId === "2") {
+        document.getElementById('score2').textContent = score;
+        document.getElementById('status2').textContent = "Updated";
     }
 });
+
+// Simulate live score updates every 5 seconds
+function simulateLiveScores() {
+    setInterval(() => {
+        let score1 = Math.floor(Math.random() * 10);
+        let score2 = Math.floor(Math.random() * 10);
+        document.getElementById('score1').textContent = score1;
+        document.getElementById('score2').textContent = score2;
+    }, 5000);  // updates every 5 seconds
+}
+
+simulateLiveScores();
