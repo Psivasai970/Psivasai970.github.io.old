@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports League Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sports League Management System</h1>
+    </header>
+
+    <section class="main-content">
+        <h2>Schedule a Match</h2>
+        <form id="schedule-form">
+            <label for="team1">Team 1:</label>
+            <input type="text" id="team1" name="team1" required>
+
+            <label for="team2">Team 2:</label>
+            <input type="text" id="team2" name="team2" required>
+
+            <label for="date">Match Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Schedule Match</button>
+        </form>
+
+        <div id="match-schedule">
+            <h3>Upcoming Matches</h3>
+            <ul id="match-list"></ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sports League Management System</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
